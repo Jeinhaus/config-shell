@@ -28,6 +28,9 @@ else
 end
 set -x VISUAL $EDITOR
 
+# disable the greeting
+set -x fish_greeting ""
+
 # local config
 if test -f ~/.config/fish/localconfig.fish
     source ~/.config/fish/localconfig.fish
