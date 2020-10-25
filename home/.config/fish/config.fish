@@ -1,4 +1,4 @@
-set -x PATH /usr/local/sbin /usr/local/bin  $PATH
+set -x PATH /usr/local/sbin /usr/local/bin $PATH
 if test -d /snap/bin
     set -x PATH /snap/bin $PATH
 end
@@ -32,7 +32,6 @@ set -x VISUAL $EDITOR
 if test -f ~/.config/fish/localconfig.fish
     source ~/.config/fish/localconfig.fish
 end
-
 
 # Fish syntax highlighting
 set -g fish_color_autosuggestion '555'  'brblack'
