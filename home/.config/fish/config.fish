@@ -2,9 +2,10 @@ set -x PATH /usr/local/sbin /usr/local/bin $PATH
 if test -d /snap/bin
     set -x PATH /snap/bin $PATH
 end
-if test -d /urs/local/go/bin
-    set -x PATH /urs/local/go/bin $PATH
-    #https://www.digitalocean.com/community/tutorials/understanding-the-gopath
+if test -d /usr/local/go/bin
+    set -x PATH /usr/local/go/bin $PATH
+    set -x GOPATH $HOME/go
+    # https://www.digitalocean.com/community/tutorials/understanding-the-gopath
     set -x PATH $GOPATH/bin $PATH 
 end
 if test -d ~/local/bin
