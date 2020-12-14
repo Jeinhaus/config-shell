@@ -6,7 +6,7 @@ if test -d /usr/local/go/bin
     set -x PATH /usr/local/go/bin $PATH
     set -x GOPATH $HOME/go
     # https://www.digitalocean.com/community/tutorials/understanding-the-gopath
-    set -x PATH $GOPATH/bin $PATH 
+    set -x PATH $GOPATH/bin $PATH
 end
 if test -d ~/local/bin
     set -x PATH ~/local/bin $PATH
@@ -20,6 +20,10 @@ end
 if test -d ~/.npm/bin
     set -x PATH ~/.npm/bin $PATH
 end
+if test -d ~/.asdf/bin
+    set -x PATH ~/.asdf/bin $PATH
+end
+
 
 # determine the editor to use
 if which nvim 2> /dev/null > /dev/null
@@ -59,3 +63,5 @@ set -g fish_color_search_match 'bryellow'  '--background=brblack'
 set -g fish_color_selection 'white'  '--bold'  '--background=brblack'
 set -g fish_color_user brgreen
 set -g fish_color_valid_path --underline
+
+. "$HOME/.homesick/repos/homeshick/homeshick.fish"
